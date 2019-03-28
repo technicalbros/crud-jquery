@@ -58,6 +58,8 @@ export default function ajaxRequest(this: CrudRequest, config: RequestOptions) {
 
         try {
 
+            showProgress && this.toggleLoading(true);
+
             responseText = await new Promise((resolve, reject) => {
                 ajaxOptions.success = response => resolve(response)
                 ajaxOptions.error = (error) => {
@@ -69,7 +71,7 @@ export default function ajaxRequest(this: CrudRequest, config: RequestOptions) {
                 $.ajax(ajaxOptions)
             });
 
-            showProgress && this.toggleLoading(true);
+            showProgress && this.toggleLoading(false);
 
             let response: { type: "success" | "error", message: string }
 

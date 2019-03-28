@@ -84,6 +84,7 @@ function ajaxRequest(config) {
                     _l.label = 3;
                 case 3:
                     _l.trys.push([3, 7, , 8]);
+                    showProgress && this.toggleLoading(true);
                     return [4 /*yield*/, new Promise(function (resolve, reject) {
                             ajaxOptions.success = function (response) { return resolve(response); };
                             ajaxOptions.error = function (error) {
@@ -96,7 +97,7 @@ function ajaxRequest(config) {
                         })];
                 case 4:
                     responseText = _l.sent();
-                    showProgress && this.toggleLoading(true);
+                    showProgress && this.toggleLoading(false);
                     response = void 0;
                     try {
                         response = JSON.parse(responseText);
