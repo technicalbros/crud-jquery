@@ -1,4 +1,6 @@
 import * as _ from "lodash";
+import {CrudRequest} from "@crud/core";
+import ajaxRequest from "./ajaxRequest";
 
 declare global {
     interface FormData {
@@ -7,6 +9,11 @@ declare global {
 
     interface File {
         url: string
+    }
+
+
+    interface JQueryStatic {
+        crud: CrudRequest
     }
 }
 
@@ -27,3 +34,6 @@ FormData.prototype.merge = function (data: Object) {
 }
 
 export {default as ajaxRequest} from "./ajaxRequest";
+
+$.crud = new CrudRequest();
+$.crud.config(ajaxRequest);
