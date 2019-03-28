@@ -1,0 +1,25 @@
+{
+  "name": "@crud/jquery",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "description": "jQuery presets for @crud/core",
+  "repository": {
+    "url": "https://github.com/technicalbros/crud-sk"
+  },
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "lodash": "4.x.x"
+  },
+  "peerDependencies": {
+    "@crud/core": "^2.1.1"
+  },
+  "devDependencies": {
+    "@crud/core": "^2.1.4",
+    "@types/lodash": "^4.14.123",
+    "@types/jquery": "^3.3.29",
+    "typescript": "^3.1.3"
+  }
+}
