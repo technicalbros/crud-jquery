@@ -87,7 +87,7 @@ export default function ajaxRequest(this: CrudRequest, config: RequestOptions) {
 
             if (method.toLowerCase() === 'get') {
                 return response;
-            } else if (!checkDataType || this.call("checkSuccess", [data])) {
+            } else if (!checkDataType || this.call("checkSuccess", [response])) {
 
                 notify && this.notify({
                     type: "success",

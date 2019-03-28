@@ -114,7 +114,7 @@ function ajaxRequest(config) {
                     if (method.toLowerCase() === 'get') {
                         return [2 /*return*/, response];
                     }
-                    else if (!checkDataType || this.call("checkSuccess", [data])) {
+                    else if (!checkDataType || this.call("checkSuccess", [response])) {
                         notify && this.notify({
                             type: "success",
                             message: response.message
