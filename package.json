@@ -8,7 +8,9 @@
     "url": "https://github.com/technicalbros/crud-sk"
   },
   "scripts": {
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "dev": "webpack --env.mode=development",
+    "prod": "webpack --env.mode=production"
   },
   "dependencies": {
     "lodash": "4.x.x"
@@ -20,6 +22,9 @@
     "@crud/core": "^2.1.4",
     "@types/lodash": "^4.14.123",
     "@types/jquery": "^3.3.29",
-    "typescript": "^3.1.3"
+    "jquery": "^3.3.1",
+    "typescript": "^3.1.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }
